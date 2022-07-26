@@ -1,5 +1,5 @@
-<h1 align="center">
-`fp-ts` for <a href="https://github.com/denoland/deno">Deno 🦕</a>
+<h1 align="left">
+fp-ts for <a href="https://github.com/denoland/deno">Deno 🦕</a>
 </h1>
 
 [fp-ts](https://github.com/gcanti/fp-ts) is a library for _typed functional programming_ in TypeScript.
