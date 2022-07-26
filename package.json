@@ -16,6 +16,7 @@
     "clean": "rimraf ./dist",
     "prebuild": "npm run clean",
     "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json && ts-node scripts/build",
+    "denoify": "npm run build && denoify && ts-node scripts/build-deno",
     "postbuild": "prettier --loglevel=silent --write \"./dist/**/*.ts\"",
     "prepublishOnly": "ts-node scripts/pre-publish",
     "mocha": "mocha -r ts-node/register test/*.ts",
@@ -35,6 +36,10 @@
     "url": "https://github.com/gcanti/fp-ts/issues"
   },
   "homepage": "https://github.com/gcanti/fp-ts",
+  "denoify": {
+    "out": "dist/deno",
+    "index": "src/index.ts"
+  },
   "devDependencies": {
     "@types/benchmark": "^1.0.31",
     "@types/glob": "^7.1.3",
@@ -42,6 +47,7 @@
     "@types/node": "^12.6.8",
     "@types/prettier": "1.10.0",
     "benchmark": "2.1.4",
+    "denoify": "^0.11.4",
     "docs-ts": "^0.6.7",
     "dtslint": "github:gcanti/dtslint",
     "fast-check": "^1.25.1",

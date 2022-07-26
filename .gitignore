@@ -1,7 +1,11 @@
 *.log
 node_modules
-/dist
 dev
 .idea
 coverage
 docs/examples
+
+!/dist
+
+/dist/*
+!/dist/deno
